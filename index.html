@@ -33,44 +33,64 @@
         <div class="container mt-5 rounded shadow p-5">
             <div class="row">
 
+                <div class="col-md-12 row">
+                    <div class="col-md-3 mb-4">
+                        <input type="text" id="IDinsert" class="rounded inputEnter shadow-sm" placeholder="ID" onblur="getDadosBenchmark(this.value)">
+                    </div>
+                    
+                    <div class="col-md-3  mb-4" readonly disabled>
+                        <input id="status" type="text" disabled class="rounded inputDesign shadow-sm" placeholder="STATUS">
+                    </div>
+
+                    <div class="col-md-6  mb-4" readonly disabled>
+                        <input id="causeCode" type="text" disabled class="col-md-12 rounded inputDesign shadow-sm" placeholder="CAUSE CODE">
+                    </div>
+                </div>
+
+                <div class="col-md-12 row">
+
+                    <div class="col-md-4  mb-4" readonly disabled>
+                        <input type="text" disabled class="col-md-12 rounded inputDesign shadow-sm" placeholder="MATERIAL">
+                    </div>
+
+                    <div class="col-md-4" readonly disabled>
+                        <input id="fullCustomerName" type="text" disabled class="col-md-12 rounded inputDesign shadow-sm" placeholder="CLIENTE">
+                    </div>
+
+                    <div class="col-md-4">
+                        <input type="number" disabled class="col-md-12 rounded inputDesign shadow-sm" placeholder="LOTE">
+                    </div>
+
+                </div>
+
+                <div class="col-md-12 mb-4 row">
+                    <textarea id="descricao" type="text" disabled class="col-md-8 mr-1 rounded inputDesignDescricao inputDesign shadow-sm" placeholder="DESCRIÇÃO"></textarea>
+                
+                    <textarea id="riskDescription" class="col-md-3 rounded inputDesign"  disabled placeholder="RISK DESCRIPTION"></textarea>
+                </div>
+
                 <div class="col-md-3 mb-4">
-                    <input type="number" id="IDinsert" class="rounded inputEnter shadow-sm" placeholder="ID" onblur="getDadosBenchmark(this.value)">
+                    <input id="category" type="text" disabled class="rounded inputDesign shadow-sm" placeholder="CLASSIFICAÇÃO">
                 </div>
-
-                <div class="col-md-3  mb-4" readonly disabled>
-                    <input type="number" disabled class="rounded inputDesign shadow-sm" placeholder="CAUSE CODE">
-                </div>
-
-                <div class="col-md-3  mb-4" readonly disabled>
-                    <input type="text" disabled class=" rounded inputDesign shadow-sm" placeholder="MATERIAL">
-                </div>
-
-                <div class="col-md-3  mb-4" readonly disabled>
-                    <input type="text" disabled class="rounded inputDesign shadow-sm" placeholder="STATUS">
-                </div>
-
-                <div class="col-md-3" readonly disabled>
-                    <input type="text" disabled class="rounded inputDesign shadow-sm" placeholder="CLIENTE">
-                </div>
-
+                
                 <div class="col-md-3">
-                    <input type="number" disabled class="rounded inputDesign shadow-sm" placeholder="LOTE">
+                    <input id="facilityRelated" type="text" disabled class="rounded inputDesign shadow-sm" placeholder="FACILITY RELATED">
                 </div>
 
-                <div class="col-md-3">
-                    <input type="text" disabled class="rounded inputDesign shadow-sm" placeholder="DESCRIÇÃO">
+                <div class="col-md-6">
+                    <input id="jobFactor" type="text" disabled class="col-md-12 rounded inputDesign shadow-sm" placeholder="JOB FACTOR">
                 </div>
 
-                <div class="col-md-3  mb-4">
-                    <input type="text" disabled class="rounded inputDesign shadow-sm" placeholder="CLASSIFICAÇÃO">
-                </div>
-
-                <div class="col-md-3">
-                    <input type="text" disabled class="rounded inputDesign shadow-sm" placeholder="FACILITY RELATED">
+                <div class="col-md-6">
+                    <textarea id="customerMaterial" type="text" disabled class="col-md-12 rounded inputDesign shadow-sm" placeholder="CUSTOMER MATERIAL"></textarea>
                 </div>
 
             </div>
         </div>
- 
+
+        <div id="divMaster" class="container mt-5 text-center">
+            <span id="erro" class="btn p-3 initialSpan">Insira o ID desejado</span>
+        </div>
+
     </body>
 </html>
