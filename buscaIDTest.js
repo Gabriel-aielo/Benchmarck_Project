@@ -23,7 +23,6 @@ function getDadosBenchmark(IDinsert) {
 
                     // Compare o valor inserido com o ID presente no objeto atual
                     if(valorRecuperado.ID === valorID) {
-
                         //garantia de limpeza da divMaster Span
                         document.getElementById('divMaster').innerHTML = ''; 
 
@@ -37,6 +36,7 @@ function getDadosBenchmark(IDinsert) {
                         document.getElementById('riskDescription').value = valorRecuperado["Risk Description"]
                         document.getElementById('status').value = valorRecuperado["Follow-Up Status"];
                         document.getElementById('causeCode').value = valorRecuperado["Cause Code"];
+                        document.getElementById('hbfOrderNumber').value = valorRecuperado['HBF Order Number'];
                         document.getElementById('facilityRelated').value = valorRecuperado["Defect Location"];
                         document.getElementById('category').value = valorRecuperado.Category;
                         document.getElementById('jobFactor').value = valorRecuperado["Job Factor"];
@@ -75,6 +75,7 @@ function getDadosBenchmark(IDinsert) {
                         document.getElementById('descricao').value = "DESCRIPITION";
                         document.getElementById('status').value = "STATUS";
                         document.getElementById('causeCode').value = "CAUSE CODE";
+                        document.getElementById('hbfOrderNumber').value = "HBF Order Number";
                         document.getElementById('facilityRelated').value = "DEFECT LOCATION";
                         document.getElementById('category').value = "CATEGORY";
                         document.getElementById('jobFactor').value = "JOB FACTOR";
