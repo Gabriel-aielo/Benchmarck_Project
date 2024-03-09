@@ -8,6 +8,8 @@
         <link rel="stylesheet" type="text/css" href="./index.css">
         <link rel="icon" type="image/png" href="./img/icon.png">
 
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
         
         
         <!--Scripts JavaScript para tratamento dos dados em json-->
@@ -19,71 +21,58 @@
     <body>
 
         <!--Navbar Brand-->
-        <nav class="navbar shadow mb-5 navbar-light bg-light mb-4">
-            <div class="container">
-                <div class="row align-items-center ">
-                    <div class="navbar-brand"><a><img src="./img/icon.png" width="70px"></a></div>
-                    <h3 class="brandText">CONSULTA BENCHMARK</h3>
+        <nav class="container-fluid  navbar navbar-expand-md shadow mb-3 navbar-light bg-light mb-4">
+            <div class="row col-md-12 align-items-center">
+
+                <div class="row col-md-8 align-items-center">
+                    <div class=" navbar-brand"><a><img src="./img/icon.png" width="70px"></a></div>
+                        <h3 class="align-items-center col-md-9  brandText">CONSULTA BENCHMARK</h3>
                 </div>
+
+                <button class="navbar-toggler ml-auto" data-toggle="collapse" data-target="#navbar" ><i class="fas fa-bars"></i>a</button>
+
+                <div class="col-md-4 navbar-collapse collapse" id="navbar"> 
+                    <ul class="navbar-nav ml-auto">
+                        <li class="navbar-item btn"><a href="#" class="navbar-item buscaID">Busca por ID</a></li>
+                        <li class="navbar-item btn"><a href="indexBuscaPorCliente.html" class="navbar-item buscaID">Busca por cliente </a></li>
+                      
+                    </ul>
+                </div>
+            
             </div>
+
         </nav>
 
         <!--Inputs de consulta-->
 
-        <div class="container mt-5 rounded shadow p-5">
-            <div class="row">
+        <div class="container mt-3 rounded shadow p-5">
+            <div class="row d-flex ">
 
-                <div class="col-md-12 row">
-                    <div class="col-md-3 mb-4">
-                        <input type="text" id="IDinsert" class="rounded inputEnter shadow-sm" placeholder="ID" onblur="getDadosBenchmark(this.value)">
-                    </div>
+                    <h6 class="col-md-12">INSIRA O ID PARA BUSCAR AS INFORMAÇÕES QUE DESEJA:</h6>
+                        
+                        <input type="text" id="IDinsert" class="col-md-3 m-1 rounded border inputEnter shadow" placeholder="ID" onblur="getDadosBenchmark(this.value)">
                     
-                    <div class="col-md-3  mb-4" readonly disabled>
-                        <input id="status" type="text" disabled class="rounded inputDesign shadow-sm" placeholder="STATUS">
-                    </div>
+                        <input id="status" type="text" disabled class="col-md-3 m-1 rounded inputDesign shadow-sm" placeholder="STATUS">
+                    
+                        <input id="causeCode" type="text" disabled class="col-md-4 m-1 rounded inputDesign shadow-sm" placeholder="CAUSE CODE">
 
-                    <div class="col-md-6  mb-4" readonly disabled>
-                        <input id="causeCode" type="text" disabled class="col-md-12 rounded inputDesign shadow-sm" placeholder="CAUSE CODE">
-                    </div>
-                </div>
+                        <input type="text" id="hbfOrderNumber" disabled class="col-md-4 m-1 rounded inputDesign shadow-sm" placeholder="HBF ORDER NUMBER">
+                    
+                        <input id="fullCustomerName" type="text" disabled class="col-md-4 m-1 rounded inputDesign shadow-sm" placeholder="CUSTOMER">
+                        
+                        <textarea id="customerMaterial" type="text" disabled class="m-1 col-md-6 rounded inputDesign shadow-sm" placeholder="CUSTOMER MATERIAL"></textarea>
+                    
+                        <input type="number" disabled class="col-md-2 m-1 rounded inputDesign shadow-sm" placeholder="LOTE">
 
-                <div class="col-md-12 row">
+                        <textarea id="descricao" type="text" disabled class="col-md-6 m-1 rounded inputDesignDescricao inputDesign shadow-sm" placeholder="DESCRIÇÃO"></textarea>
+                    
+                        <textarea id="riskDescription" class="col-md-4 m-1 rounded inputDesign"  disabled placeholder="RISK DESCRIPTION"></textarea>
 
-                    <div class="col-md-4  mb-4" readonly disabled>
-                        <input type="text" disabled class="col-md-12 rounded inputDesign shadow-sm" placeholder="MATERIAL">
-                    </div>
+                        <input id="category" type="text" disabled class="col-md-3 m-1 rounded inputDesign shadow-sm" placeholder="CLASSIFICAÇÃO">
+                    
+                        <input id="facilityRelated" type="text" disabled class="col-md-4 m-1 rounded inputDesign shadow-sm" placeholder="FACILITY RELATED">
 
-                    <div class="col-md-4" readonly disabled>
-                        <input id="fullCustomerName" type="text" disabled class="col-md-12 rounded inputDesign shadow-sm" placeholder="CLIENTE">
-                    </div>
-
-                    <div class="col-md-4">
-                        <input type="number" disabled class="col-md-12 rounded inputDesign shadow-sm" placeholder="LOTE">
-                    </div>
-
-                </div>
-
-                <div class="col-md-12 mb-4 row">
-                    <textarea id="descricao" type="text" disabled class="col-md-8 mr-1 rounded inputDesignDescricao inputDesign shadow-sm" placeholder="DESCRIÇÃO"></textarea>
-                
-                    <textarea id="riskDescription" class="col-md-3 rounded inputDesign"  disabled placeholder="RISK DESCRIPTION"></textarea>
-                </div>
-
-                <div class="col-md-3 mb-4">
-                    <input id="category" type="text" disabled class="rounded inputDesign shadow-sm" placeholder="CLASSIFICAÇÃO">
-                </div>
-                
-                <div class="col-md-3">
-                    <input id="facilityRelated" type="text" disabled class="rounded inputDesign shadow-sm" placeholder="FACILITY RELATED">
-                </div>
-
-                <div class="col-md-6">
-                    <input id="jobFactor" type="text" disabled class="col-md-12 rounded inputDesign shadow-sm" placeholder="JOB FACTOR">
-                </div>
-
-                <div class="col-md-6">
-                    <textarea id="customerMaterial" type="text" disabled class="col-md-12 rounded inputDesign shadow-sm" placeholder="CUSTOMER MATERIAL"></textarea>
-                </div>
+                        <input id="jobFactor" type="text" disabled class="col-md-4 m-1 rounded inputDesign shadow-sm" placeholder="JOB FACTOR">
 
             </div>
         </div>
